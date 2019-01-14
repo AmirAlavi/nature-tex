@@ -1,0 +1,49 @@
+\ProvidesPackage{naturetex}
+
+\usepackage{etoolbox}
+\usepackage{authblk}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum} % Just for the example
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{fullpage}
+\usepackage{setspace}
+
+%% Replace with your paper title
+\newcommand{\papertitle}{Midichlorian-assisted cold fusion}
+\newtoggle{supp}
+\togglefalse{supp}
+
+\DeclareOption{supp}{\toggletrue{supp}}
+\ProcessOptions\relax
+
+\iftoggle{supp}{
+	\title{Supplementary Information for\\ \papertitle}
+	\usepackage[style=nature, backend=biber]{biblatex}
+	\addbibresource{bibliography.bib}
+}{
+	\title{\papertitle}
+}
+
+%% Replace with your authorship info
+\author[1,$\dagger$]{\textbf{Judith Hawkins}}
+\author[1,$\dagger$]{\textbf{Jonathan Estrada}}
+\author[1]{\textbf{Christine Wallace}}
+\author[1]{\textbf{Ronald Butler}}
+\author[1,2,*]{\textbf{Henry Chapman}}
+\affil[1]{Computational Biology Department}
+\affil[2]{Machine Learning Department}
+\affil[ ]{Cranberry Lemon University\\
+Pittsburgh, PA 15213}
+\affil[$\dagger$]{\small Equal contribution}
+\affil[*]{\small Corresponding author: \texttt{henry\_94@example.com}}
+\date{}
+
+\newcommand{\beginsupplement}{%
+	\setcounter{table}{0}
+	\renewcommand{\tablename}{Supplementary Table}
+	\setcounter{figure}{0}
+	\renewcommand{\figurename}{Supplementary Figure}
+}
