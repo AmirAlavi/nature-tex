@@ -6,6 +6,7 @@ LaTeX template and build code for a Nature style research article submission
 * Preamble kept separate in `naturetex.sty` for cleaner tex code
 * Allows you to use a separate bibliography file with `cite` commands as usual
 * Generates the final single `.tex` file for you, as expected by Nature journals
+* **Works in shared editors like Overleaf**
 
 # Prerequisites
 * Python
