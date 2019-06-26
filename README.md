@@ -7,6 +7,7 @@ LaTeX template and build code for a Nature style research article submission
 * Allows you to use a separate bibliography file with `cite` commands as usual
 * Generates the final single `.tex` file for you, as expected by Nature journals
 * **Works in shared editors like Overleaf**
+    * You can continue to edit and compile your tex files in Overleaf. How: clone the backing repo for a blank Overleaf project, and push the files of this repo into it. Then you can edit your files in Overleaf normally in the cloud, but run this tool locally to get submission-ready files.
 
 # Prerequisites
 * Python
